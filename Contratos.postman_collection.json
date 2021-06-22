@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "703fdbb1-4628-4487-9f6d-d3eb17439497",
+		"name": "Contratos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "CADASTRAR",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Lázaro Silva\",\r\n    \"customerCnpj\": \"12345678913\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/customers/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"129\",\r\n    \"customerName\": \"Iago Oliveira\",\r\n    \"customerCnpj\": \"12345678911\"\r\n}"
+						},
+						"url": {
+							"raw": "{{path}}/customers/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/customers/filter/a",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"customers",
+								"filter",
+								"a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETAR",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/customers/remove/129",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"customers",
+								"remove",
+								"129"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "CADASTRAR",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobName\": \"Python Development\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/jobs/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"jobs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobId\": \"69\",\r\n    \"jobName\": \"C++ Development\"\r\n}"
+						},
+						"url": {
+							"raw": "{{path}}/jobs/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"jobs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/jobs/filter/Dev",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"jobs",
+								"filter",
+								"Dev"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETAR",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contract",
+			"item": [
+				{
+					"name": "CADASTRAR",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"66\",\r\n    \"jobId\": \"97\",\r\n    \"endOfContract\": \"12/10/2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/contracts/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"contracts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ATUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contractId\": \"131\",\r\n    \"customerId\": \"66\",\r\n    \"jobId\": \"97\",\r\n    \"endOfContract\": \"12/10/2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}/contracts/",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"contracts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/contracts/customer/12345678910",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"contracts",
+								"customer",
+								"12345678910"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETAR",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{path}}/contracts/remove/68",
+							"host": [
+								"{{path}}"
+							],
+							"path": [
+								"contracts",
+								"remove",
+								"68"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "path",
+			"value": "localhost:8080/contractsdemo"
+		}
+	]
+}
